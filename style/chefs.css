@@ -1,0 +1,337 @@
+/* Dialogs */
+.dialog {
+  display: none;
+}
+
+/* JQuery UI */
+.ui-dialog .ui-dialog-content {
+  overflow: visible;
+}
+.ui-widget-content .ui-state-default {
+  background: #f3f3f3;
+  border-radius: 0;
+}
+
+/* Chronologie */
+#table_chronologie_wrapper {
+  margin: 20px auto 0 auto;
+  width: 90%;
+}
+
+#table_chronologie {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	border-collapse: collapse;
+	text-align: center;
+
+}
+#table_chronologie a,
+.paginate_enabled_next,
+.paginate_enabled_previous {
+  color: #0088cc !important;
+  text-decoration: none;
+}
+#table_chronologie a:hover,
+.paginate_enabled_next:hover,
+.paginate_enabled_previous:hover {
+  color: #005580 !important;
+  text-decoration: underline;
+}
+
+#table_chronologie td {
+	padding: 3px;
+}
+#table_chronologie thead tr {
+	background: #333;
+  color: #eee;
+	font-weight: bold;
+}
+#table_chronologie thead td {
+  padding: 5px 0;
+}
+#table_chronologie .odd {
+	background: white;
+}
+#table_chronologie .even {
+	background: #f3f3f3;
+}
+#table_chronologie_info {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+
+	font-weight: bold;
+	margin: 15px 0 0 25px;
+
+}
+#table_chronologie_paginate {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 12px;
+  font-weight: bold;
+	margin: 15px 15px 0 0;
+
+}
+#table_chronologie_paginate a {
+  padding-top: 2px;  
+}
+#table_chronologie td.sorting,
+#table_chronologie td.sorting_asc,
+#table_chronologie td.sorting_desc {
+	cursor: pointer;
+}
+#table_chronologie a.action {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
+  margin: auto 2px;
+}
+#table_chronologie a.action:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+#table_chronologie a.action.edit {
+  content: url(edit-small.png);
+}
+#table_chronologie a.action.delete {
+  content: url(delete-small.png);
+}
+
+/* Flag */
+.flag {
+	margin-right: 5px;
+}
+
+/* Popups */
+.ui-dialog-titlebar,
+.ui-dialog-titlebar-close {
+  color: #ccc;
+  background: #333 !important;
+  background-image: none !important;
+  color: #eee !important;
+  border: none !important;
+  border-radius: 0;
+}
+.ui-icon-closethick,
+.ui-icon-closethick:hover {
+  background-position: -96px -128px !important;
+}
+.ui-dialog .row {
+  margin: 15px auto;
+}
+.ui-dialog label {
+  display: block;
+  width: 100%;
+  margin: 15px 0 5px 2px;
+}
+.ui-dialog label:first-of-type {
+  margin-top: 0;
+}
+.ui-dialog button {
+  margin: 30px 5px 15px 5px;
+  float: right;
+}
+#filtres select,
+#dialog_newedit select {
+	width: 420px;
+}
+#filtre_label_date {
+  display: inline;
+}
+#filtre_date {
+  display: inline;
+  border: none;
+}
+#filtre_date_slider {
+  margin-top: 5px;
+}
+#filtre_label_encours {
+  margin: 0;
+  width: 40px;
+}
+#newedit_nouveau {
+  width: 420px;
+  padding: 5px;
+}
+
+/* Chosen */
+.chzn-container .chzn-results .active-result {
+cursor: pointer;
+display: list-item;
+}
+.chzn-container .chzn-results {
+  max-height: 140px;
+}
+.chzn-container .chzn-results li {
+  font-size: 11px;
+  line-height: 8px;
+}
+.chzn-container-multi .chzn-choices {
+  background-image: none;
+}
+.chzn-container-multi .chzn-choices .search-choice {
+  border-radius: 0;
+  background: #f3f3f3;
+}
+
+/* Bootstrap tooltip */
+.tooltip {
+  position: absolute;
+  z-index: 99999;
+  display: block;
+  visibility: visible;
+  font-size: 11px;
+  line-height: 1.4;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  border: none;
+  background: none;
+}
+.tooltip.in {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.tooltip.top {
+  margin-top: -3px;
+  padding: 5px 0;
+}
+.tooltip.right {
+  margin-left: 3px;
+  padding: 0 5px;
+}
+.tooltip.bottom {
+  margin-top: 3px;
+  padding: 5px 0;
+}
+.tooltip.left {
+  margin-left: -3px;
+  padding: 0 5px;
+}
+.tooltip-inner {
+  max-width: 200px;
+  padding: 8px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  background-color: #000000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.tooltip-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.tooltip.top .tooltip-arrow {
+  bottom: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-top-color: #000000;
+}
+.tooltip.right .tooltip-arrow {
+  top: 50%;
+  left: 0;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-right-color: #000000;
+}
+.tooltip.left .tooltip-arrow {
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #000000;
+}
+.tooltip.bottom .tooltip-arrow {
+  top: 0;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-bottom-color: #000000;
+}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.fade.in {
+  opacity: 1;
+}
+
+/* Timeline */
+#timeline {
+  width: 90%;
+  margin: 20px auto 0 auto;
+}
+
+/* Quick filtre */
+#quick_filtre {
+  box-sizing: border-box;
+  width: 90%;
+  margin: 80px auto 0 auto;
+  padding: 5px 10px;
+  background: #333;
+  color: #eee;
+  font-weight: bold;
+}
+#quick_filtre .title {
+  cursor: pointer;  
+}
+#quick_filtre .title:before{
+  content: '';
+  display: inline-block;
+	border-top: 5px solid transparent;
+	border-bottom: 5px solid transparent;
+	border-left: 8px solid #eee;
+  margin-right: 8px;
+  transition: transform 0.5s;
+}
+#quick_filtre .title.deployed:before{
+  transform: rotate(0.25turn);
+}
+#quick_filtre  ul { 
+  padding: 0;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+#quick_filtre li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 32px;
+  vertical-align: bottom;
+}
+#quick_filtre li .flag {
+  margin-right: 2px;
+  cursor: pointer;
+}
+
+#quick_filtre li.letter {
+  font-size: 11pt;
+  margin-right: 3px;
+  vertical-align: -10%;
+  color: #999;
+}
+#quick_filtre li.letter:before {
+  content: '';
+  background: #999;
+  border: 1px solid #999;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 4px;
+  width: 2px;
+  height: 2px;
+  vertical-align: middle;
+}
+#quick_filtre li.letter:not(:first-of-type):before {
+  margin-left: 6px;
+}
+
+

@@ -1,0 +1,67 @@
+.timeline-container {
+	position: relative;
+	overflow-x: auto;
+	overflow-y: hidden;
+	width: 100%;
+}
+.timeline-container * {
+  box-sizing: border-box;
+}
+
+.timeline-container .line-year {
+  position: absolute;
+  background: #ddd;
+  border-right: 2px solid white;
+}
+.timeline-container .line-arrow {
+  position: absolute;
+  top: 0;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #ddd;
+}
+
+.timeline-container .label-year {
+  position: absolute;
+  text-align: center;
+  color: #aaa;
+  height: 20px;
+}
+
+.timeline-container .line-period {
+  position: absolute;
+  opacity: 0.5;
+}
+
+.timeline-container .label-name-meta {
+  position: absolute;
+  display: table;
+  background: white;
+  text-align: center;
+  padding: 5px;
+  background: #efefef;
+  border-left: 5px solid;
+  z-index: 2;
+  font-size: 11px;
+}
+.timeline-container .label-name {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.timeline-container .name-marker {
+  position: absolute;
+}
+.timeline-container .name-marker:after {
+  position: absolute;
+  bottom: -5px;
+  left: -5px;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 11;
+}
