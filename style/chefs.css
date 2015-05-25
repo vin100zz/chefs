@@ -11,6 +11,10 @@
   background: #f3f3f3;
   border-radius: 0;
 }
+#filtre_label_encours.ui-state-active {
+  background: #0088cc;
+  color: #eee;
+}
 
 /* Chronologie */
 #table_chronologie_wrapper {
