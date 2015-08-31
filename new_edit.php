@@ -17,6 +17,9 @@ $evt = getParam('newedit_evt');
 $nouveau = getParam('newedit_nouveau');
 $titre = getParam('newedit_titre');
 
+Logger::log("==================");
+Logger::log("* id=$id, date=$date, pays=$pays, evt=$evt, nouveau=$nouveau, titre=$titre");
+
 
 // update or insert
 if($id != "")
