@@ -285,6 +285,7 @@ $(document).ready( function ()
 
 function clearNewEditForm() {
   $("#dialog_newedit")[0].reset();
+  $("#newedit_id").val('');
   $("#dialog_newedit .chzn-done").trigger("liszt:updated");
 }
 

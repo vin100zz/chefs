@@ -23,7 +23,8 @@ html {
 }
 #page-header:before {
   display: block;
-  content: url(churchill.png) no-repeat;
+  content: '';
+  background: url(churchill.png) no-repeat;
   width: 85px;
   height: 85px;
   position: absolute;

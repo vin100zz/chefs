@@ -5,11 +5,16 @@ include_once 'flags.php';
 include_once 'combi_pays.php';
 include_once 'link.php';
 
+function escape($str) {
+  return str_replace("'", "''", $str);
+}
+
 function setWhereClause($param, $col)
 {
 	if(isset($_REQUEST[$param]))
 	{
-		$values = explode(",", $_REQUEST[$param]);
+		$value = escape($_REQUEST[$param]);
+		$values = explode(",", $value);
 		$values = "'" . implode("', '", $values) . "'";
 		return "$col IN(" . $values . ")";
 	}
@@ -123,7 +128,7 @@ if(isset($_REQUEST["combiPays"]))
 		$paysForValue = array_values($combi_pays[$value]);
 		foreach($paysForValue as $pays)
 		{
-			$listePays[] = $pays;
+			$listePays[] = escape($pays);
 		}
 	}
 	

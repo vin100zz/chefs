@@ -5,9 +5,13 @@ include_once 'logger.php';
 
 function getParam($param) {
   if(isset($_REQUEST[$param])) {
-    return str_replace("'", "''", $_REQUEST[$param]);
+    return escape($_REQUEST[$param]);
   }
   return "";
+}
+
+function escape($str) {
+  return str_replace("'", "''", $str);
 }
 
 $id = getParam('newedit_id');
@@ -43,7 +47,7 @@ if ($pays != null && $pays != "") {
     $id = $row["Id"];
     $ancien = '';
     if ($row["Date"] != null && $row["Date"] != "") {
-      $ancien = $chefs[$i-1]["Nouveau"];
+      $ancien = escape($chefs[$i-1]["Nouveau"]);
     }
     DBAccess::exec("UPDATE chronologie SET ancien='$ancien' WHERE id='$id'");
     Logger::log("UPDATE chronologie SET ancien='$ancien' WHERE id='$id'");

@@ -2,8 +2,12 @@
 
 include_once 'dbaccess.php';
 
+function escape($str) {
+  return str_replace("'", "''", $str);
+}
+
 // param
-$pays = $_GET['pays'];
+$pays = escape($_GET['pays']);
 
 // DB
 $query = "SELECT * FROM chronologie WHERE pays='$pays' ORDER BY date ASC";

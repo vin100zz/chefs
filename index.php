@@ -24,10 +24,10 @@ function drawMultipleSelect($data, $id, $text, $multiple)
 beginHtml();
 
 // filtres
-$pays = DBAccess::singleColumn("SELECT DISTINCT(pays) FROM chronologie");
-$evt = DBAccess::singleColumn("SELECT DISTINCT(evenement) FROM chronologie");
-$perso = DBAccess::singleColumn("SELECT DISTINCT(nouveau) FROM chronologie");
-$titre = DBAccess::singleColumn("SELECT DISTINCT(titre) FROM chronologie");
+$pays = DBAccess::singleColumn("SELECT DISTINCT(pays) FROM chronologie ORDER BY pays");
+$evt = DBAccess::singleColumn("SELECT DISTINCT(evenement) FROM chronologie ORDER BY evenement");
+$perso = DBAccess::singleColumn("SELECT DISTINCT(nouveau) FROM chronologie ORDER BY nouveau");
+$titre = DBAccess::singleColumn("SELECT DISTINCT(titre) FROM chronologie ORDER BY titre");
 
 println("<div id='dialog_filtres' class='dialog' title='Filtres'>");
 	println("<form id='filtres'>");
@@ -57,13 +57,14 @@ println("<ul>");
   $letter = '';
   foreach($pays as $item)
   {
+    //$item = str_replace("'", "&aquot;", $item);
     $newLetter = substr($item, 0, 1);
     if ($newLetter != $letter) {
       $letter = $newLetter;
       println("<li class='letter'><span>$letter</span></li>");
     }
     $code = (isset($country_codes[$item]) ? $country_codes[$item] : "xx");
-    println("<li><div class='flag flag32 $code' title='$item'></div></li>");
+    println("<li><div class='flag flag32 $code' title=\"$item\"></div></li>");
   }
 println("</ul>");
 println("</div>");
@@ -73,7 +74,8 @@ println("<div id='timeline'></div>");
 
 // table
 println("<table id='table_chronologie' width='100%'>");
-println("<thead><td>Id</td><td width='130px'>Date</td><td width='170px'>Pays</td><td width='120px'>Événement</td><td>Ancien</td><td>Nouveau</td><td width='120px'>Titre</td><td width='120px'>Départ</td><td width='120px'>Durée</td><td width='50px'></td></thead>");println("<tbody>");
+println("<thead><td>Id</td><td width='130px'>Date</td><td width='170px'>Pays</td><td width='120px'>Événement</td><td>Ancien</td><td>Nouveau</td><td width='120px'>Titre</td><td width='120px'>Départ</td><td width='120px'>Durée</td><td width='50px'></td></thead>");
+println("<tbody>");
 
 println("</tbody>");
 println("</table>");
