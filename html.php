@@ -13,8 +13,8 @@ function beginHtml()
 		 
 		// JQuery & JQuery UI
 		println("<link rel='stylesheet' type='text/css' href='script/jquery-ui-1.10.1.custom/css/custom-theme/jquery-ui-1.10.1.custom.min.css' />"); 
-		println("<script type='text/javascript' src='http://code.jquery.com/jquery-1.9.1.js'></script>");
-		println("<script type='text/javascript' src='http://code.jquery.com/ui/1.10.1/jquery-ui.js'></script>");
+		println("<script type='text/javascript' src='script/jquery-1.9.1.js'></script>");
+		println("<script type='text/javascript' src='script/jquery-ui.js'></script>");
 		 
 		// DataTables
 		println("<script type='text/javascript' charset='utf-8' src='script/DataTables-1.9.4/media/js/jquery.dataTables.js'></script>");
@@ -27,7 +27,7 @@ function beginHtml()
 		println("<link rel='stylesheet' href='script/chosen-master/chosen/chosen.css' />");
 		
 		// Font
-		println("<link href='http://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>");
+		println("<link href='https://fonts.googleapis.com/css?family=Russo+One' rel='stylesheet' type='text/css'>");
 		
 		// Flags
 		println("<link rel='stylesheet' type='text/css' href='style/flags/stylesheets/flags16.css' />");
