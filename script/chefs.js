@@ -105,7 +105,7 @@ $(document).ready( function ()
     "bProcessing": true,
 		"bFilter": false,
     "sAjaxSource": "data.php",
-		"iDisplayLength": 40,
+		"iDisplayLength": 50,
 		"bLengthChange": false,
 		"fnDrawCallback": function(oSettings, json) {initRowButtons();},
 		"aoColumnDefs": [{'bSortable': false, 'aTargets': [9]}],
