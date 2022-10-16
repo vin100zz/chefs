@@ -186,6 +186,7 @@ $country_codes["Serbie"] = "rs";
 $country_codes["Serbie-Monténégro"] = "serbia-montenegro";
 $country_codes["Seychelles"] = "sc";
 $country_codes["Sierra Leone"] = "sl";
+$country_codes["Sikkim"] = "sikkim";
 $country_codes["Singapour"] = "sg";
 $country_codes["Slovaquie"] = "sk";
 $country_codes["Slovénie"] = "si";
