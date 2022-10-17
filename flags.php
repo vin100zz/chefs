@@ -20,6 +20,7 @@ $country_codes["Argentine"] = "ar";
 $country_codes["Arménie"] = "am";
 $country_codes["Australie"] = "au";
 $country_codes["Autriche"] = "at";
+$country_codes["Azawad"] = "azawad";
 $country_codes["Azerbaïdjan"] = "az";
 $country_codes["Bahamas"] = "bs";
 $country_codes["Bahreïn"] = "bh";
