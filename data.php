@@ -42,6 +42,8 @@ function formatDuree($row)
 {
 	// debut
 	$debut = strtotime($row["Date"]);
+
+	$isFutureEvent = false;
 	
 	// fin
 	if($row["Depart"] === "")
@@ -50,12 +52,18 @@ function formatDuree($row)
 			return "";
 			
 		$fin = time();
+		$isFutureEvent = $fin < $debut;
 	}
 	else
 		$fin = strtotime($row["Depart"]);
 	
 	// nb jours
-	$nbJoursTot = floor( ($fin-$debut) / (60*60*24) );
+	$nbJoursTot = floor( abs($fin-$debut) / (60*60*24) );
+
+	if ($isFutureEvent) {
+		++$nbJoursTot;
+	}
+
 	$nbAnnees = floor($nbJoursTot/365);
 	$nbMois = floor( ($nbJoursTot%365) / 30 );
 	$nbJours = floor( ($nbJoursTot%30) );
@@ -67,6 +75,10 @@ function formatDuree($row)
 		$str = $nbMois . " mois" . (abs($nbJours) > 1 ? " $nbJours jour" . ($nbJours > 1 ? "s" : "") : "");
 	else
 		$str = "$nbJours jour" . (abs($nbJours) > 1 ? "s" : "");
+
+	if ($isFutureEvent) {
+		$str = "dans " . $str;
+	}
 	
 	return "<span hidden='hidden'>" . str_pad($nbJoursTot, 5, "0", STR_PAD_LEFT) . "</span>$str";
 }
